@@ -9,17 +9,24 @@ Today's class contents
 - Initiate a TestCafe project
 - Write basics testcases with testcafe
 - Tips 
-=========================================
 
+## What is TestCafe
 TestCafe: Automation testing framework for web application.
+
 Free and open source
+
 Supports windows, linux and mac OS
+
 Easy Setup
+
 Multiple browser supports
+
 Runs on Node.js
+
 Test can be created with JavaScript or TypeScript, CoffeeScript
 
-Features:
+
+## Features:
 1. Test Recording.
 2. Parallel run on multiple browsers.
 3. Local and remote run.
@@ -28,36 +35,51 @@ Features:
 6. CI/CD integrations.
 7. TestCafe Studio 
 
-Pre-requisite of TestCafe
-1. Install Node and NPM : https://nodejs.org/en/download
+## Pre-requisite of TestCafe
+
+1. Install Node and NPM : 
+```https://nodejs.org/en/download```
 
 how to check node and npm version
-node --version
-npm --version
+
+	node --version
+	npm --version
 
 2. Install IDE : vscode
-https://code.visualstudio.com/download
+```https://code.visualstudio.com/download ```
 
-Project Setup
+## Project Setup
 1. Install TestCafe
+
 	a) vs code 
+
 	b) open folder
+
 	c) terminal : 
+
 		npm init -y
 		npm install testcafe --save-dev
+
+
 -> at first "package.json" file will be created (node project) 
+
 -> package.json gets updated 
+
 -> and node-module, package-lock.json got created 
 
 
-3. TestCafe - Write 1st Testcase
+
+## TestCafe - Write 1st Testcase
 a) create a new folder for "tests" and create a file "test1.js"
+
 b) Create a fixture and test section
 
 TestCafe test files consist of fixtures and tests
+
 A fixture is a groups of tests that share the same starting URL.
 
-4. TestCafe - executing Testcase
-testcafe chrome .\tests\test1.js
+## TestCafe - Executing Testcase
+
+	testcafe chrome .\tests\test1.js
 
 
