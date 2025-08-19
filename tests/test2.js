@@ -1,4 +1,4 @@
-fixture('Getting Started')
+fixture('Getting Started for test2.js')
     .page('https://trytestingthis.netlify.app/');
 
 test('1st test', async t => {
@@ -16,3 +16,4 @@ test('1st test', async t => {
     .wait(5000)
     
 })
+
