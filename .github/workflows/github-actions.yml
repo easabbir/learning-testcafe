@@ -1,5 +1,3 @@
-name: TestCafe Tests
-
 name: Run TestCafe Tests
 
 on: [push, pull_request]
