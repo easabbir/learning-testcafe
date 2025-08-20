@@ -83,3 +83,9 @@ A fixture is a groups of tests that share the same starting URL.
 	testcafe chrome .\tests\test1.js
 
 
+## To run with reporter
+Install the dependencies
+npm install --save-dev testcafe-reporter-html
+
+and execute the folowing 
+testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
