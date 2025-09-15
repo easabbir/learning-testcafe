@@ -21,16 +21,26 @@ test('2nd test', async t => {
         .wait(5000)
         
         
-        // .resizeWindow(800, 600)
-        // .wait(1000)
-        // .resizeWindow(800, 600)
-        // .wait(1000)
-        // .maximizeWindow()
-        // .wait(1000)
-        // .scrollBy(0, 500)
-        // .wait(1000)
+        //.resizeWindow(800, 600)
+        .wait(2000)
+        //.resizeWindow(2000, 4000)
+        .wait(2000)
+        
+        .maximizeWindow()
+        .wait(2000)
+        
+        .scrollBy(0, 500)
+        .wait(1000)
+        .scrollBy(0, -500)
+        .wait(1000)
+        .scrollBy(0, 800)
+        .wait(1000)
+
+        .expect(Selector('body > div.navbar > a:nth-child(1)').innerText).eql('Contact')
+        
         // .expect(Selector('body > div.navbar > a:nth-child(2)').innerText).eql('Home')
         // .wait(1000)
+        
         // .navigateTo('https://www.google.com')
         // .wait(2000);
 })
