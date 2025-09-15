@@ -146,3 +146,24 @@ npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
 - Handled common errors (like command not found)
 - Used demo sites for testing
 - Set up GitHub Actions for CI/CD
+
+---
+## Hosting report in CICD
+---
+
+How it works:
+
+The report is copied to public/index.html.
+The public folder is deployed to the gh-pages branch.
+
+The summary includes a link to the live report:
+https://<your-username>.github.io/<your-repo>/
+
+
+Note:
+
+The report will be updated on every push to main or master.
+
+The link will only work after the first successful deployment to gh-pages.
+
+You may need to enable GitHub Pages in your repo settings (set source to gh-pages branch, / (root) folder).
