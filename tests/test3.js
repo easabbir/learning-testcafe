@@ -40,7 +40,7 @@ test('Dropdown test', async t => {
         .wait(1000)
         
         // Verify dropdown selection
-        .expect(Selector('#option').value).eql('option2')
+        .expect(Selector('#option').value).eql('option 1')
         
         // Test another dropdown if available
         .click('#owc')

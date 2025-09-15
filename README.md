@@ -133,7 +133,7 @@ npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
   ```
 - Run tests with HTML report:
   ```
-  npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
+npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
   ```
 
 ---
