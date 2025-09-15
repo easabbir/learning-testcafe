@@ -28,4 +28,40 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: testcafe-reports
-          path: tests/reports/
+          path: tests/reports/name: Run TestCafe Tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run TestCafe tests
+        run: npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
+
+      - name: Upload TestCafe HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testcafe-html-report
+          path: tests/reports/report.html
+
+      - name: Add report link to summary
+        if: always()
+        run: |
+          echo "## 📄 TestCafe HTML Report" >> $GITHUB_STEP_SUMMARY
+          echo "[Download and view the HTML report](./artifacts/testcafe-html-report/report.html)" >> $GITHUB_STEP_SUMMARY
