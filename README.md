@@ -97,6 +97,10 @@ If you want to use a reporter (like HTML):
 npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
 ```
 
+```
+npx testcafe chrome tests/ --reporter html:tests/reports/report.html
+```
+
 ## Common Issues & Solutions
 
 - **'testcafe' is not recognized as the name of a cmdlet...**
