@@ -61,3 +61,21 @@ test('Dropdown test', async t => {
         // Take screenshot of dropdown test results
         .takeScreenshot('dropdown-test.png')
 })
+
+test('Contact page navigation and assertion', async t => {
+    await t
+        .maximizeWindow()
+        
+        // Navigate to contact page
+        .click('a[href="/contact"]')
+        .wait(2000)
+        
+        // Assert the thank you message is present
+        .expect(Selector('h2').withText('Thank you for using this Website :)').exists).ok('Thank you message should be visible on contact page')
+        
+        // Additional assertion to verify exact text content
+        .expect(Selector('h2').withText('Thank you for using this Website :)').innerText).eql('Thank you for using this Website :)')
+        
+        // Take screenshot of contact page
+        .takeScreenshot('contact-page.png')
+})
