@@ -41,8 +41,8 @@ test('2nd test', async t => {
         // .expect(Selector('body > div.navbar > a:nth-child(2)').innerText).eql('Home')
         // .wait(1000)
         
-        // .navigateTo('https://www.google.com')
-        // .wait(2000);
+        .navigateTo('https://www.google.com')
+        .wait(2000);
 })
 
 
