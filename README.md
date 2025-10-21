@@ -131,14 +131,58 @@ npx testcafe chrome tests/ --reporter html:tests/reports/report.html
   ```
   npm ci
   ```
-- Run tests:
+- Run all tests:
   ```
   npx testcafe chrome tests/
   ```
 - Run tests with HTML report:
   ```
-npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
+  npx testcafe chrome:headless tests/ --reporter html:tests/reports/report.html
   ```
+
+## Running Individual Tests
+
+TestCafe provides several ways to run specific tests instead of the entire test suite:
+
+### Run a Specific Test File
+```bash
+npx testcafe chrome tests/test3.js
+```
+
+### Run a Specific Test by Name
+Use the `-t` or `--test` flag followed by the test name:
+```bash
+npx testcafe chrome tests/test3.js -t "Contact page navigation and assertion"
+```
+
+### Run Multiple Specific Tests
+```bash
+npx testcafe chrome tests/test3.js -t "2nd test" -t "Dropdown test"
+```
+
+### Run Tests with Pattern Matching
+Use wildcards to match test names:
+```bash
+npx testcafe chrome tests/ -t "*dropdown*"
+```
+
+### Run Individual Tests with HTML Reporter
+```bash
+npx testcafe chrome tests/test3.js -t "Contact page navigation and assertion" --reporter html:tests/reports/report.html
+```
+
+### Examples from Current Project
+Based on the tests in `test3.js`:
+```bash
+# Run only the contact page test
+npx testcafe chrome tests/test3.js -t "Contact page navigation and assertion"
+
+# Run only the dropdown test
+npx testcafe chrome tests/test3.js -t "Dropdown test"
+
+# Run only the 2nd test
+npx testcafe chrome tests/test3.js -t "2nd test"
+```
 
 ---
 **Summary of what was done:**

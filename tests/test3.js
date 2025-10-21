@@ -67,7 +67,7 @@ test('Contact page navigation and assertion', async t => {
         .maximizeWindow()
         
         // Navigate to contact page
-        .click('a[href="/contact"]')
+        .click('.button.bar-item')
         .wait(2000)
         
         // Assert the thank you message is present
